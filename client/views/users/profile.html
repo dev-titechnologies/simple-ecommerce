@@ -1,11 +1,11 @@
 <template name="profile">
 	<div class="row">
 		<div class="col-md-12">
-			<h4>Minhas Informações</h4>
-			<p><strong>Nome:</strong> {{currentUser.profile.completeName}}</p>
-			<p><strong>Limite de Crédito:</strong> {{ duasCasas currentUser.profile.creditLimit }}</p>
+			<h4>My Info</h4>
+			<p><strong>Name:</strong> {{currentUser.profile.completeName}}</p>
+			<p><strong>Credit limit:</strong> {{ duasCasas currentUser.profile.creditLimit }}</p>
 			<hr>
-			<p><a href="{{ pathFor 'editProfile'}}" class="btn btn-default btn-xs"><i class="fa fa-pencil-square-o"></i> Editar Informações</a></p>
+			<p><a href="{{ pathFor 'editProfile'}}" class="btn btn-default btn-xs"><i class="fa fa-pencil-square-o"></i> Edit Information</a></p>
 		</div>
 	</div>
 </template>

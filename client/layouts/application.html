@@ -8,21 +8,21 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="{{ pathFor 'home' }}">Minha Loja</a>
+          <a class="navbar-brand" href="{{ pathFor 'home' }}">My Store</a>
         </div>
         <div class="navbar-collapse collapse">
           <ul class="nav navbar-nav">
           </ul>
           <ul class="nav navbar-nav navbar-right">
 						{{#if currentUser}}
-						<li><a href="{{ pathFor 'profile' }}">Meus Dados</a></li>
-            <li><a href="{{ pathFor 'purchases' }}">Minhas Compras</a></li>
+						<li><a href="{{ pathFor 'profile' }}">My Data</a></li>
+            <li><a href="{{ pathFor 'purchases' }}">My Shopping</a></li>
 						{{/if}}
             {{#if isAdmin }}
-            <li><a href="{{ pathFor 'dashboard' }}">Área Administrativa</a></li>
+            <li><a href="{{ pathFor 'dashboard' }}">Administrative Area</a></li>
             {{/if}}
 						{{> loginButtons }} <!-- here -->
-            <li><a href="{{ pathFor 'carrinho' }}"><i class="fa fa-shopping-cart"></i> Carrinho {{> amountCart}}</a></li>
+            <li><a href="{{ pathFor 'carrinho' }}"><i class="fa fa-shopping-cart"></i> Cart {{> amountCart}}</a></li>
           </ul>
         </div><!--/.nav-collapse -->
       </div>
@@ -31,7 +31,7 @@
     <!-- Main jumbotron for a primary marketing message or call to action -->
     <div class="jumbotron">
       <div class="container">
-        <h2>Seja bem vindo a <i>Minha Loja</i></h2>
+        <h2>Welcome to <i>My Store</i></h2>
         <p>Beta Ecommerce - Proof of Concept</p>
       </div>
     </div>
@@ -45,7 +45,7 @@
       <hr>
       <div class="row">
         <div class="col-md-offset-2 col-md-10">
-          <p>&copy; <i>Minha Loja</i> 2014. Desenvolvido com <a href="http://meteor.com" target="_blank">meteor</a> - <i class="fa fa-github"></i> <a href="https://github.com/renatoramiro/simple-ecommerce" target="_blank">https://github.com/renatoramiro/simple-ecommerce</a></p>
+          <p>&copy; <i>My Store</i> 2015.</p>
         </div>
       </div>
     </footer>
