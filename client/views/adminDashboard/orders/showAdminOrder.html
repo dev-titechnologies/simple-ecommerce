@@ -1,18 +1,18 @@
 <template name="showAdminOrder">
 	<div class="row">
 		<div class="col-md-12">
-			<h2>Pedido <small>{{_id}}</small></h2>
+			<h2>Order <small>{{_id}}</small></h2>
 			<p class="lead">
-				Data da compra: {{ formatarData createdAt}}<br>
-				Forma de Pagamento: {{formaDePagamento}}<br>
-				Usuário: <a href="/admin/users/{{this.userId}}">{{this.userCompleteName}}</a>
+                Date of purchase: {{ formatarData createdAt}}<br>
+				Payment Method: {{formaDePagamento}}<br>
+				User: <a href="/admin/users/{{this.userId}}">{{this.userCompleteName}}</a>
 			</p>
 			<br><br>
 			<table class="table">
 				<thead>
-					<th>Nome</th>
-					<th>Preço</th>
-					<th>Quantidade</th>
+					<th>Name</th>
+					<th>price</th>
+					<th>Quantity</th>
 				</thead>
 				<tbody>
 					{{#each products}}
@@ -27,7 +27,7 @@
 			<p class="text-right lead text-success"><strong>Total: {{somaProdutos this.products}}</strong></p>
 			<hr>
 			<p class="text-left">
-				<a href="{{ pathFor 'allOrders'}}" class="btn btn-default"><i class="fa fa-arrow-left"></i> Voltar para pedidos</a>
+				<a href="{{ pathFor 'allOrders'}}" class="btn btn-default"><i class="fa fa-arrow-left"></i> Back to Orders</a>
 			</p>
 		</div>
 	</div>

@@ -8,17 +8,17 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="{{ pathFor 'home' }}">Minha Loja</a>
+          <a class="navbar-brand" href="{{ pathFor 'home' }}">My Store</a>
         </div>
         <div class="navbar-collapse collapse">
           <ul class="nav navbar-nav">
           </ul>
           <ul class="nav navbar-nav navbar-right">
-            <li><a href="{{ pathFor 'dashboard' }}"><i class="fa fa-users"></i> Lista de Usuários</a></li>
-            <li><a href="{{ pathFor 'allOrders' }}"><i class="fa fa-tasks"></i> Pedidos</a></li>
-            <li><a href="{{ pathFor 'listProducts' }}"><i class="fa fa-database"></i> Produtos</a></li>
+            <li><a href="{{ pathFor 'dashboard' }}"><i class="fa fa-users"></i> Member List</a></li>
+            <li><a href="{{ pathFor 'allOrders' }}"><i class="fa fa-tasks"></i> Orders</a></li>
+            <li><a href="{{ pathFor 'listProducts' }}"><i class="fa fa-database"></i> Products</a></li>
             {{#if isAdmin}}
-            <li><a href="{{ pathFor 'dashboard' }}">Área Administrativa</a></li>
+            <li><a href="{{ pathFor 'dashboard' }}">Administrative Area</a></li>
             {{/if}}
 						{{> loginButtons }} <!-- here -->
           </ul>
@@ -30,9 +30,9 @@
       <div class="row">
         <div class="col-md-2 sidebar">
           <ul class="nav nav-sidebar">
-            <li><a href="{{ pathFor 'dashboard' }}"><i class="fa fa-users"></i> Lista de Usuários</a></li>
-            <li><a href="{{ pathFor 'allOrders' }}"><i class="fa fa-tasks"></i> Pedidos</a></li>
-            <li><a href="{{ pathFor 'listProducts' }}"><i class="fa fa-database"></i> Produtos</a></li>
+            <li><a href="{{ pathFor 'dashboard' }}"><i class="fa fa-users"></i> Member List</a></li>
+            <li><a href="{{ pathFor 'allOrders' }}"><i class="fa fa-tasks"></i> Orders</a></li>
+            <li><a href="{{ pathFor 'listProducts' }}"><i class="fa fa-database"></i> Products</a></li>
           </ul>
         </div>
         <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
@@ -46,7 +46,7 @@
       <hr>
       <div class="row">
         <div class="col-md-offset-2 col-md-4">
-          <p>&copy; Minha Loja 2014</p>
+          <p>&copy; My Store 2014</p>
         </div>
       </div>
     </footer>

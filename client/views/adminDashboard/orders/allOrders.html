@@ -1,11 +1,11 @@
 <template name="allOrders">
-  <h2>Lista de Pedidos</h2>
+  <h2>Order List</h2>
   <table class="table">
     <thead>
       <tr>
-        <th>Criada em</th>
-        <th>Usuário</th>
-        <th>Forma de Pagamento</th>
+        <th>Created in</th>
+        <th>User</th>
+        <th>Payment Method</th>
         <th>Total R$</th>
         <th></th>
       </tr>
@@ -18,7 +18,7 @@
         <td>{{formaDePagamento}}</td>
         <td>{{somaProdutos this.products}}</td>
         <td>
-          <a href="{{ pathFor 'showAdminOrder'}}" class="btn btn-default btn-xs"><i class="fa fa-eye"></i> Ver</a>
+          <a href="{{ pathFor 'showAdminOrder'}}" class="btn btn-default btn-xs"><i class="fa fa-eye"></i> View</a>
         </td>
       </tr>
       {{/each}}
@@ -27,9 +27,9 @@
   
   <center>
     {{#if limitPagination limite}}
-    <a class="give-me-more btn btn-primary btn-block"><i class="fa fa-refresh"></i> Exibir mais 5 pedidos</a>
+    <a class="give-me-more btn btn-primary btn-block"><i class="fa fa-refresh"></i> View more 5 Orders</a>
     {{else}}
-    <a class="btn btn-default btn-block" disabled="disabled"><i class="fa fa-times"></i> Final da Listagem</a>
+    <a class="btn btn-default btn-block" disabled="disabled"><i class="fa fa-times"></i> Listing the final</a>
     {{/if}}
   </center>
 </template>

@@ -3,20 +3,20 @@ Schema = {};
 Schema.UserProfile = new SimpleSchema({
     completeName: {
       type: String,
-			label: 'Nome Completo',
+			label: 'Full Name',
 			optional: true
     },
 
     creditLimit: {
       type: Number,
-      label: 'Limite de Crédito',
+      label: 'Credit limit',
       decimal: true,
       optional: true
     },
 
     permissao: {
       type: String,
-      label: 'Permissão',
+      label: 'Permission',
       optional: true
     }
 });
