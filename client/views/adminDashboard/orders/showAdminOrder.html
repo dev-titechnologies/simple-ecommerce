@@ -3,8 +3,8 @@
 		<div class="col-md-12">
 			<h2>Order <small>{{_id}}</small></h2>
 			<p class="lead">
-                Date of purchase: {{ formatarData createdAt}}<br>
-				Payment Method: {{formaDePagamento}}<br>
+                Date of purchase: {{ dateFormat createdAt}}<br>
+				Payment Method: {{inOrderPayment}}<br>
 				User: <a href="/admin/users/{{this.userId}}">{{this.userCompleteName}}</a>
 			</p>
 			<br><br>
@@ -24,7 +24,7 @@
 					{{/each}}
 				</tbody>
 			</table>
-			<p class="text-right lead text-success"><strong>Total: {{somaProdutos this.products}}</strong></p>
+			<p class="text-right lead text-success"><strong>Total: {{sumProducts this.products}}</strong></p>
 			<hr>
 			<p class="text-left">
 				<a href="{{ pathFor 'allOrders'}}" class="btn btn-default"><i class="fa fa-arrow-left"></i> Back to Orders</a>

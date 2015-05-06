@@ -26,7 +26,7 @@ Schemas.Order = new SimpleSchema({
     type: Number
   },
 
-  formaDePagamento: {
+  inOrderPayment: {
     type: String
   },
 

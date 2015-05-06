@@ -13,10 +13,10 @@
     <tbody>
       {{#each orders}}
       <tr>
-        <td>{{ formatarData createdAt}}</td>
+        <td>{{ dateFormat createdAt}}</td>
         <td>{{ userCompleteName}}</td>
-        <td>{{formaDePagamento}}</td>
-        <td>{{somaProdutos this.products}}</td>
+        <td>{{inOrderPayment}}</td>
+        <td>{{sumProducts this.products}}</td>
         <td>
           <a href="{{ pathFor 'showAdminOrder'}}" class="btn btn-default btn-xs"><i class="fa fa-eye"></i> View</a>
         </td>

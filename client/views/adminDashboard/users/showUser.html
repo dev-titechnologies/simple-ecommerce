@@ -30,8 +30,8 @@
 		<tbody>
 			{{#each orders}}
 			<tr>
-				<td>{{formatarData createdAt}}</td>
-				<td>{{formaDePagamento}}</td>
+				<td>{{dateFormat createdAt}}</td>
+				<td>{{inOrderPayment}}</td>
 				<td>{{duasCasas total}}</td>
 				<td><a href="{{ pathFor 'showAdminOrder'}}" class="btn btn-default btn-xs"><i class="fa fa-eye"></i> View</a></td>
 			</tr>

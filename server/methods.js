@@ -52,7 +52,7 @@ Meteor.methods({
     if (opcaoPagamento === 'Credit Limit') {
       Meteor.users.update({_id: user._id}, {$inc: { 'profile.creditLimit': -(total)}});
     }
-    return Orders.insert({userId: user._id, userCompleteName: user.profile.completeName, formaDePagamento: opcaoPagamento, products: products});
+    return Orders.insert({userId: user._id, userCompleteName: user.profile.completeName, inOrderPayment: opcaoPagamento, products: products});
   },
 
   updateRoleUser: function (userId, role) {
