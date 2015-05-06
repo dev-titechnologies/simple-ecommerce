@@ -1,3 +1,3 @@
-UI.registerHelper('formatarData', function (data) {
+UI.registerHelper('dateFormat', function (data) {
     return moment(data).format("DD/MM/YYYY HH:mm");
 });
