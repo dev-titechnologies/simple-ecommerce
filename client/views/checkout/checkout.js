@@ -26,7 +26,7 @@ Template.checkout.events({
 		var carrinho = Carts.findOne({_id: Session.get('carts')});
 		var opcaoPagamento = t.find('input[name=opcaoPagamento]:checked').value;
 		var erros = 0;
-		// Validar quantidade do produto em estoque
+		//Validate product quantity in stock
 		_.map(carrinho.products, function (product) {
 			if(product.quantity > Products.findOne({_id: product._id}).quantity){
 				Router.go('carrinho');
@@ -40,7 +40,7 @@ Template.checkout.events({
 			total += product.price * product.quantity;
 		});
 
-		// Validar limite de crédito
+		// Validating credit limit
 		if ((total > Meteor.user().profile.creditLimit) && (opcaoPagamento == 'Credit Limit')) {
 			Router.go('checkout');
 			erros += 1;
