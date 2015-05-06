@@ -1,10 +1,10 @@
 <template name="showProduct">
-	<h2>Detalhes do Produto</h2>
+	<h2>Product Details</h2>
 	<hr>
-	<p class="lead"><strong>Nome:</strong> {{name}}</p>
-	<p class="lead"><strong>Preço:</strong> {{duasCasas price}}</p>
-	<p class="lead"><strong>Estoque:</strong> {{quantity}}</p>
+	<p class="lead"><strong>Name:</strong> {{name}}</p>
+	<p class="lead"><strong>Price:</strong> {{duasCasas price}}</p>
+	<p class="lead"><strong>Quantity:</strong> {{quantity}}</p>
 	<hr>
-	<a href="{{ pathFor 'listProducts'}}" class="btn btn-default"><i class="fa fa-arrow-left"></i> Voltar para Lista de Produtos</a>
-	<a href="{{ pathFor 'editProduct'}}" class="btn btn-warning"><i class="fa fa-edit"></i> Editar Produto</a>
+	<a href="{{ pathFor 'listProducts'}}" class="btn btn-default"><i class="fa fa-arrow-left"></i> Back to Product List</a>
+	<a href="{{ pathFor 'editProduct'}}" class="btn btn-warning"><i class="fa fa-edit"></i> Edit Product</a>
 </template>

@@ -3,12 +3,12 @@
   <div class="row">
     <div class="col-md-12">
     	{{#if cart.products}}
-    	<h2>Finalizando a Compra</h2>
+    	<h2>Finalizing the purchase</h2>
       <table class="table">
         <thead>
-          <th>Nome</th>
-          <th>Preço</th>
-          <th>Quantidade</th>
+          <th>Name</th>
+          <th>Price</th>
+          <th>Quantity</th>
         </thead>
         <tbody>
           {{#each cart.products}}
@@ -25,19 +25,19 @@
       <div class="row">
         <div class="col-sm-6">
           <div class="panel panel-danger">
-            <div class="panel-heading"><p class="text-left lead text-danger"><strong>Escolha uma opção de pagamento: </strong></p></div>
+            <div class="panel-heading"><p class="text-left lead text-danger"><strong>Choose a payment option: </strong></p></div>
             <div class="panel-body">
               <p>
                 {{#if limiteDeCreditoValido}}
                 <label class="radio-inline text-success">
-                  <strong><input type="radio" name="opcaoPagamento" id="credito" value="Limite de Crédito" checked><i class="fa fa-ticket"></i> Limite de Crédito</strong>
+                  <strong><input type="radio" name="opcaoPagamento" id="credito" value="Limite de Crédito" checked><i class="fa fa-ticket"></i> Credit Limit</strong>
                 </label>
                 <label class="radio-inline text-primary">
-                  <strong><input type="radio" name="opcaoPagamento" id="boleto" value="Boleto Bancário"><i class="fa fa-file-pdf-o"></i> Boleto Bancário</strong>
+                  <strong><input type="radio" name="opcaoPagamento" id="boleto" value="Bank Slip"><i class="fa fa-file-pdf-o"></i> Bank Slip</strong>
                 </label>
                 {{else}}
                 <label class="radio-inline text-primary">
-                  <strong><input type="radio" name="opcaoPagamento" id="boleto" value="Boleto Bancário" checked><i class="fa fa-file-pdf-o"></i> Boleto Bancário</strong>
+                  <strong><input type="radio" name="opcaoPagamento" id="boleto" value="Bank Slip" checked><i class="fa fa-file-pdf-o"></i> Bank Slip</strong>
                 </label>
                 {{/if}}
                 <label class="radio-inline">
@@ -49,16 +49,16 @@
         </div>
         <div class="col-sm-6">
           <p class="text-right">
-            <a href="{{ pathFor 'carrinho'}}" class="btn btn-default"><i class="fa fa-arrow-left"></i> Voltar para o carrinho</a>
-            <a href="" id="close-purchase" class="btn btn-default btn-primary"><i class="fa fa-dot-circle-o"></i> Fechar Compra</a>
+            <a href="{{ pathFor 'carrinho'}}" class="btn btn-default"><i class="fa fa-arrow-left"></i> Back to the cart</a>
+            <a href="" id="close-purchase" class="btn btn-default btn-primary"><i class="fa fa-dot-circle-o"></i> Checkout</a>
           </p>
         </div>
       </div>
       {{else}}
-      <h2>Carrinho está vazio.</h2>
+      <h2>Basket is empty.</h2>
       <hr>
       <p class="text-left">
-        <a href="{{ pathFor 'home'}}" class="btn btn-default"><i class="fa fa-arrow-left"></i> Voltar para o catálogo</a>
+        <a href="{{ pathFor 'home'}}" class="btn btn-default"><i class="fa fa-arrow-left"></i> Back to the catalog</a>
       </p>
       {{/if}}
     </div>

@@ -49,7 +49,7 @@ Meteor.methods({
       total += product.quantity * product.price;
       Products.update({_id: product._id}, {$inc: {quantity: -(product.quantity)}});
     });
-    if (opcaoPagamento === 'Limite de Crédito') {
+    if (opcaoPagamento === 'Credit Limit') {
       Meteor.users.update({_id: user._id}, {$inc: { 'profile.creditLimit': -(total)}});
     }
     return Orders.insert({userId: user._id, userCompleteName: user.profile.completeName, formaDePagamento: opcaoPagamento, products: products});

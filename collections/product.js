@@ -12,20 +12,20 @@ Schemas.Products = new SimpleSchema({
   
   name: {
     type: String,
-    label: 'Nome do Produto'
+    label: 'Product Name'
   },
 
   price: {
     type: Number,
     min: 0,
     decimal: true,
-    label: 'Preço'
+    label: 'Price'
   },
 
   quantity: {
     type: Number,
     min: 0,
-    label: 'Quantidade em Estoque'
+    label: 'Quantity in Stock'
   },
 
   createdAt: {

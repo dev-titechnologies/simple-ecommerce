@@ -1,10 +1,10 @@
 <template name="purchases">
-	<h1>Minhas Compras</h1>
+	<h1>My Shopping</h1>
 	<table class="table table-striped">
 	  <thead>
 	    <tr>
-	      <th>Feita em</th>
-				<th>Forma de Pagamento</th>
+	      <th>Made in</th>
+				<th>Payment Method</th>
 				<th>Total R$</th>
 	      <th></th>
 	    </tr>
@@ -15,7 +15,7 @@
 	      <td>{{ formatarData createdAt}}</td>
 				<td>{{ formaDePagamento}}</td>
 				<td>{{somaProdutos this.products}}</td>
-	      <td><a href="{{ pathFor 'showPurchase' }}" class="btn btn-default btn-xs"><i class="fa fa-info-circle"></i> Ver Compra</a></td>
+	      <td><a href="{{ pathFor 'showPurchase' }}" class="btn btn-default btn-xs"><i class="fa fa-info-circle"></i> View Buy</a></td>
 	    </tr>
 	    {{/each}}
 	  </tbody>

@@ -31,7 +31,7 @@ Template.checkout.events({
 			if(product.quantity > Products.findOne({_id: product._id}).quantity){
 				Router.go('carrinho');
 				erros += 1;
-				Errors.throw(product.name + " ultrapassou a quantidade no estoque. Quantidade máxima: " + Products.findOne({_id: product._id}).quantity);
+				Errors.throw(product.name + " exceeded the amount in stock. maximum: " + Products.findOne({_id: product._id}).quantity);
 			}
 		});
 
@@ -41,10 +41,10 @@ Template.checkout.events({
 		});
 
 		// Validar limite de crédito
-		if ((total > Meteor.user().profile.creditLimit) && (opcaoPagamento == 'Limite de Crédito')) {
+		if ((total > Meteor.user().profile.creditLimit) && (opcaoPagamento == 'Credit Limit')) {
 			Router.go('checkout');
 			erros += 1;
-			Errors.throw("Você não possui Limite de Crédito suficiente.");
+			Errors.throw("You do not have enough credit limit.");
 		}
 
 		if (erros < 1) {
