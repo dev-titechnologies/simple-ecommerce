@@ -1,15 +1,15 @@
 <template name="adminNotAuthorized">
 	<center>
 		<div class="alert alert-warning">
-		  <h3>Área Administrativa - Acesso não permitido</h3>
+		  <h3>Administrative area - not permitted access</h3>
 		  {{#if currentUser}}
 		  	{{#if isAdmin}}
-		  		<p>Faça o login para continuar!</p>
+		  		<p>Please log in to continue !</p>
 	  		{{else}}
-					<p>Você não tem permissão para entrar nessa área</p>
+					<p>You are not allowed to enter this area</p>
 				{{/if}}
   	{{else}}
-			<p>Faça o login para continuar!</p>
+			<p>Please log in to continue !</p>
 		{{/if}}
 		</div>
 	</center>
